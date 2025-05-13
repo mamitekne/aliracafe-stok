@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'barcode_scanner.dart';
 import 'product_list_screen.dart';
+import 'web_scanner_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +17,9 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => const BarcodeScanner()),
+                  MaterialPageRoute(
+                    builder: (_) => const WebScannerScreen(),
+                  ),
                 );
               },
               icon: const Icon(Icons.qr_code_scanner),
